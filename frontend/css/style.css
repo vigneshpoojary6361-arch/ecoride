@@ -1,0 +1,362 @@
+:root {
+    --primary-color: #198754;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #198754;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+    color: white;
+    padding: 80px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image {
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Forms */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--success-color);
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* Tables */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: var(--light-color);
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+}
+
+/* Ride Cards */
+.ride-card {
+    border-left: 4px solid var(--success-color);
+    transition: all 0.3s ease;
+}
+
+.ride-card:hover {
+    border-left-color: var(--warning-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Status Badges */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--success-color);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+    }
+}
+
+/* Custom Alerts */
+.alert {
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #0f5132;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #721c24;
+}
+
+/* Tab Navigation */
+.nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--success-color);
+    color: white;
+    border-radius: 25px 25px 0 0;
+}
+
+/* Search Results */
+.search-result-item {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-result-item:hover {
+    border-color: var(--success-color);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Empty States */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--secondary-color);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+/* Footer */
+footer {
+    margin-top: 80px;
+}
+
+/* Utility Classes */
+.text-success {
+    color: var(--success-color) !important;
+}
+
+.bg-success {
+    background-color: var(--success-color) !important;
+}
+
+.border-success {
+    border-color: var(--success-color) !important;
+}
+
+/* Dashboard specific styles */
+.dashboard-stat {
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-stat i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.dashboard-stat h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dashboard-stat p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Rating stars */
+.rating-stars {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.rating-star {
+    color: #ddd;
+    transition: color 0.2s ease;
+}
+
+.rating-star:hover,
+.rating-star.text-warning {
+    color: #ffc107 !important;
+}
+
+.rating-star.text-muted {
+    color: #ddd !important;
+}
+
+/* Notifications */
+.notification-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+    background-color: rgba(25, 135, 84, 0.05);
+}
+
+#notificationPanel {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #dee2e6;
+    background: white;
+}
+#notificationPanel .notification-item.unread {
+    font-weight: bold;
+    background-color: rgba(25, 135, 84, 0.1);
+}     
+
+input.editable {
+  background-color: #fff8e1 !important; /* soft yellow */
+  border-color: #ffc107 !important;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.ride-card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #adb5bd;
+}
+
+.alert {
+  border-radius: 8px;
+}
+
+input.editable {
+  background-color: #fff9e6;
+  border: 1px solid #ffc107;
+}
+
+.rating-stars i {
+  transition: 0.3s;
+}
+
+.rating-stars i:hover {
+  transform: scale(1.2);
+}
+
+#notificationPanel {
+  background-color: #fff;
+  border-radius: 8px;
+}
+#notificationPanel .notification-item.unread {
+  background-color: #e9f7ef;
+}
+#vehicleImageModal img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#vehicleImageModal img:hover {
+  transform: scale(1.05);
+}
+#searchResults {
+  transition: opacity 0.3s ease;
+}
+#searchResults.loading {
+  opacity: 0.6;
+}
